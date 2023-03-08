@@ -36,6 +36,10 @@ void setup() {
     writeAddr++;
   }
 
+  Serial.println();
+  Serial.println("[LOG] Ecriture terminee");
+  Serial.println();
+
   verifyContent();
 }
 

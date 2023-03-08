@@ -32,6 +32,8 @@ void writeContent(long address, byte data)
   Serial.println();
   
   writeData(binaryData);
+
+  // TODO : Blink the WE pin
   
   Serial.print("[LOG] : Succes en ");
   Serial.print(millis() - begin);

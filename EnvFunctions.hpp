@@ -26,6 +26,7 @@ void setMode(bool state)
     for(int i = 0; i < IOPIN_NB; ++i)
     {
       pinMode(IO[i], OUTPUT);
+      digitalWrite(IO[i], LOW);
     }
     
   }
@@ -34,6 +35,7 @@ void setMode(bool state)
     // Mode de lecture
     for(int i = 0; i < IOPIN_NB; ++i)
     {
+      digitalWrite(IO[i], LOW);
       pinMode(IO[i], INPUT);
     }
   }

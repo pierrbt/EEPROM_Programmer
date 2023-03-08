@@ -11,14 +11,23 @@ void compareData(byte dataToWrite[], byte dataToRead[], int length);
 void verifyContent()
 {
   setMode(0);
+
+  delay(10);
+  
   const int dataLength = sizeof(DATA);
   byte decodedData[dataLength];
   long readAddr = 0;
+  
   for(int i = 0; i < dataLength; ++i)
   {
     selectAddress(readAddr);
+
+    delay(20);
     
     bool octet[IOPIN_NB];
+
+    
+    
     readData(octet);
 
     decodedData[i] = boolArrayToHex(octet, IOPIN_NB);
